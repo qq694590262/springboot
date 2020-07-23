@@ -1,6 +1,9 @@
 这是一个自述文件，再次修改，只提交在gitee。测试提交一次到gitee、github两个公共仓库中。
 
-<694590262@qq.com>测试邮箱，首尾分别添加<>可变成超链接。<baidu.com>
+<694590262@qq.com>测试邮箱，首尾分别添加<>邮箱可跳转。  
+url前添加www，可以自动变成超链接。
+baidu.com  
+www.baidu.com
 
 测试换行：1.在第一行的结尾敲两个空格再回车；  
 &emsp;&emsp;&emsp;&emsp;&emsp;2.html标签"&lt;br/&gt;"<br/>
