@@ -1,7 +1,7 @@
 这是一个自述文件，再次修改，只提交在gitee。测试提交一次到gitee、github两个公共仓库中。
 
 <694590262@qq.com>测试邮箱，首尾分别添加<>邮箱可跳转。  
-url前添加www，可以自动变成超链接。
+url前添加www，可以自动变成超链接。  
 baidu.com  
 www.baidu.com
 
