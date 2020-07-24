@@ -88,17 +88,17 @@ public class DataBaseUtils {
 	 */
 	public static void update(String sql, Object... objects) {
 		Connection connection = getConnection();
-		PreparedStatement statement = null;
+		PreparedStatement preStatement = null;
 		try {
-			statement = (PreparedStatement) connection.prepareStatement(sql);
+			preStatement = connection.prepareStatement(sql);
 			for (int i = 0; i < objects.length; i++) {
-				statement.setObject(i + 1, objects[i]);
+				preStatement.setObject(i + 1, objects[i]);
 			}
-			statement.executeUpdate();
+			preStatement.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			closeConnection(connection, statement, null);
+			closeConnection(connection, preStatement, null);
 		}
 	}
 

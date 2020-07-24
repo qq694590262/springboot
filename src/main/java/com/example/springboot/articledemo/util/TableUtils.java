@@ -10,7 +10,7 @@ public class TableUtils {
 	public static String getCreateTableSQl(Class<?> clazz) {
 		StringBuilder sb = new StringBuilder();
 //		sb.append("create table ");
-		// ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
+		// »ñÈ¡±íÃû
 		Table table = (Table) clazz.getAnnotation(Table.class);
 		String tableName = table.tableName();
 		sb.append("DROP TABLE IF EXISTS ").append(tableName).append(";\n");
@@ -19,7 +19,7 @@ public class TableUtils {
 
 		Field[] fields = clazz.getDeclaredFields();
 		String primaryKey = "";
-		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½
+		// ±éÀúËùÓÐ×Ö¶Î
 		for (int i = 0; i < fields.length; i++) {
 			Column column = (Column) fields[i].getAnnotations()[0];
 			String field = column.field();

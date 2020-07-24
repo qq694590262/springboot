@@ -3,6 +3,7 @@ package com.example.springboot.articledemo.test;
 import com.example.springboot.articledemo.service.ArticleService;
 
 import java.util.List;
+import java.util.UUID;
 
 
 public class TestProperties {
@@ -15,13 +16,13 @@ public class TestProperties {
 //		String id = UUID.randomUUID() + "";
 //		String createTime = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 //		DataBaseUtils.update("INSERT INTO t_user(id,username,password,sex,create_time,is_delete,address,telephone) "
-//		        + "VALUES (?, ?, ?, ?, ?, ?, ?, ?)",id,"ï¿½ï¿½ï¿½ï¿½",123456,0,createTime,0,"ï¿½ï¿½ï¿½ï¿½","ï¿½ï¿½ï¿½ï¿½");
+//		        + "VALUES (?, ?, ?, ?, ?, ?, ?, ?)",id,"ÕÅÈý",123456,0,createTime,0,"±£ÃÜ","±£ÃÜ");
 
 //		DataBaseUtils.config("jdbc.properties");
 //		List list = DataBaseUtils.queryForList("select * from t_user");
 //		System.out.println(list);
 
-//		ï¿½ï¿½ï¿½ï¿½Îªnullï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ø²ï¿½Ö¹Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//		·µ»ØÎªnull£¬ÒòÎª·µ»Ø²»Ö¹Ò»ÌõÊý¾Ý
 //		Map map = DataBaseUtils.queryForMap("select * from t_user");
 //		System.out.println(map);
 
@@ -39,7 +40,7 @@ public class TestProperties {
 		
 		ArticleService ArticleService = new ArticleService();
 		List list = ArticleService.getArticlesByCategoryId(2,0,10);
-		List list1 = ArticleService.getContentByArticleId("68dde068-b8ee-4a3b-9032-daead02e62a3");
+		List list1 = ArticleService.getContentByArticleId(UUID.randomUUID().toString());
 		System.out.println(list);
 		System.out.println(list1);
 		
