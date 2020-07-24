@@ -1,5 +1,9 @@
 package com.example.springboot.articledemo.util;
 
+import java.lang.reflect.Array;
+import java.util.Collection;
+import java.util.Map;
+
 public class StringUtils {
 	public static boolean isEmpty(String str) {
 		return null == str || str.equals("") || str.matches("\\s*");
@@ -10,6 +14,25 @@ public class StringUtils {
 			return defaultValue;
 		}
 		return content;
+	}
+
+	/**
+	 * 判断对象是否为空
+	 */
+	public static boolean isEmpty(Object obj) {
+		if (obj == null)
+			return true;
+
+		if (obj instanceof String)
+//			return StringUtils.isEmptyOrWhitespaceOnly((String) obj);
+		if (obj instanceof Collection && ((Collection<?>) obj).isEmpty())
+			return true;
+		if (obj.getClass().isArray() && Array.getLength(obj) == 0)
+			return true;
+		if (obj instanceof Map && ((Map<?, ?>) obj).isEmpty())
+			return true;
+
+		return false;
 	}
 	
 	/**
