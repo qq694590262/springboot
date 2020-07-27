@@ -22,9 +22,8 @@ public class StringUtils {
 	public static boolean isEmpty(Object obj) {
 		if (obj == null)
 			return true;
-
 		if (obj instanceof String)
-//			return StringUtils.isEmptyOrWhitespaceOnly((String) obj);
+			return org.springframework.util.StringUtils.isEmpty(obj);
 		if (obj instanceof Collection && ((Collection<?>) obj).isEmpty())
 			return true;
 		if (obj.getClass().isArray() && Array.getLength(obj) == 0)
