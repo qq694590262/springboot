@@ -5,9 +5,9 @@ import java.util.Collection;
 import java.util.Map;
 
 public class StringUtils {
-	public static boolean isEmpty(String str) {
-		return null == str || str.equals("") || str.matches("\\s*");
-	}
+//	public static boolean isEmpty(String str) {
+//		return null == str || str.equals("") || str.matches("\\s*");
+//	}
 	
 	public static String defaultValue(String content,String defaultValue) {
 		if (isEmpty(content)) {
@@ -23,14 +23,13 @@ public class StringUtils {
 		if (obj == null)
 			return true;
 		if (obj instanceof String)
-			return org.springframework.util.StringUtils.isEmpty(obj);
+			return org.apache.commons.lang.StringUtils.isBlank(obj.toString());
 		if (obj instanceof Collection && ((Collection<?>) obj).isEmpty())
 			return true;
 		if (obj.getClass().isArray() && Array.getLength(obj) == 0)
 			return true;
 		if (obj instanceof Map && ((Map<?, ?>) obj).isEmpty())
 			return true;
-
 		return false;
 	}
 	
